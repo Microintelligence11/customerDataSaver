@@ -90,6 +90,12 @@ DATABASES = {
 }
 
 
+
+# settings.py
+from dotenv import load_dotenv
+load_dotenv()
+
+
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
